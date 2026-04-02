@@ -57,8 +57,10 @@ export default function App() {
     }
   };
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const shareUrl = 'https://hname.vercel.app';
   const shareText = `Check out this aesthetic name animation! ✨`;
+  const whatsappNumber = '923106359235';
+  const tiktokUrl = 'https://www.tiktok.com/@pathan_x_babarian565';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(shareUrl);
@@ -277,15 +279,18 @@ export default function App() {
                       onClick={(e) => e.stopPropagation()}
                     >
                       <a 
-                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`}
+                        href={tiktokUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-3 hover:bg-white/10 rounded-xl transition-colors text-[#1DA1F2]"
+                        className="p-3 hover:bg-white/10 rounded-xl transition-colors text-white"
+                        title="My TikTok"
                       >
-                        <Twitter className="w-5 h-5" />
+                        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.89-.6-4.09-1.47-.88-.64-1.61-1.47-2.11-2.44v10.3c.02 2.39-1.02 4.73-2.87 6.27-1.85 1.54-4.41 2.19-6.73 1.74-2.32-.45-4.41-1.93-5.46-4.05-1.05-2.12-1.05-4.7 0-6.82 1.05-2.12 3.14-3.6 5.46-4.05 1.58-.3 3.2-.08 4.6.63v4.02c-1.08-.74-2.52-.88-3.72-.39-1.2.49-2.14 1.63-2.41 2.91-.27 1.28.1 2.67 1.01 3.59.91.92 2.3 1.29 3.58 1.02 1.28-.27 2.42-1.21 2.91-2.41.49-1.2.35-2.64-.39-3.72V.02z"/>
+                        </svg>
                       </a>
                       <a 
-                        href={`https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`}
+                        href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-3 hover:bg-white/10 rounded-xl transition-colors text-[#25D366]"
